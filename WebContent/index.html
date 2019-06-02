@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html   ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Weather Dashboard</title>
+
+
+
+<script src="vendor/jquery.js"></script>
+<script src="vendor/highcharts.js"></script>
+<script src="vendor/angularjs.js"></script>
+<script src="vendor/angularjs-route.js"></script>
+
+
+<link rel="stylesheet" href="vendor/bootstrap.css">
+<link rel="stylesheet" href="content/css/custom.css">
+
+<!--main module  -->
+<script src="app/app.module.js"></script>
+
+<!-- module and controller for first page with nav bar  -->
+<script src="app/layout/shell.module.js"></script>
+<script src="app/layout/shell.ctrl.js"></script>
+
+<!-- module and controller for search  -->
+<script src="app/search/search.module.js"></script>
+<script src="app/search/search.ctrl.js"></script>
+
+<!-- module and controller for weather list  -->
+<script src="app/weather/weather.module.js"></script>
+<script src="app/weather/weather.ctrl.js"></script>
+
+<!-- module and controller for forecast the weather of specific location  -->
+<script src="app/forecast/forecast.module.js"></script>
+<script src="app/forecast/forecast.ctrl.js"></script>
+
+<!-- module and directive for search button and field -->
+<script src="app/component/component.module.js"></script>
+<script src="app/component/search.view.js"></script>
+
+<!-- data module and service(factory) for search the weather by name  -->
+<script src="app/data/data.module.js"></script>
+<script src="app/data/weather.svc.js"></script>
+
+<!-- directive class for high chart  -->
+<script src="app/forecast/forest.view.js"></script>
+
+
+
+</head>
+<body>
+
+<div>
+<ng-include src="'app/layout/shell.html'"></ng-include>
+</div>
+
+ </body>
+</html>

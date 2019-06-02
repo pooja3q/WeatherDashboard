@@ -1,0 +1,67 @@
+<div class="row">
+ 	<div class="col-sm-11 well">
+ 			<h2>{{current.name}},  {{current.sys.country}}</h2>
+ 			<ul class="list-inline">
+ 					<li><img src="http://openweathermap.org/img/w/{{current.weather[0].icon}}.png"></li>
+ 					<li> <h2>{{current.main.temp}}&#8451; </h2></li>
+ 			     
+ 			</ul>
+ 			<h4>{{current.weather[0].main}}</h4>
+ 			<p> Got at  {{getTime(current.dt)| date: 'yyyy-MMM-dd HH:mm'}}</p>
+ 			
+ 			<div class="col-sm-4">
+ 					<table class="table table-striped table-bordered table-condensed">
+ 							<tbody>
+ 									<tr>
+ 									     <td>wind</td>
+ 									     <td>{{current.wind.speed}} m/s</td>
+ 									</tr>
+ 									
+ 									<tr>
+ 									     <td>Cloudiness</td>
+ 									     <td>{{current.weather[0].description}}</td>
+ 									</tr>
+ 									
+ 									<tr>
+ 									     <td>Pressure</td>
+ 									     <td>{{current.main.pressure}} hpa</td>
+ 									</tr>
+ 									
+ 									<tr>
+ 									     <td>Humidity</td>
+ 									     <td>{{current.main.humidity}} %</td>
+ 									</tr>
+ 									
+ 									<tr>
+ 									     <td>Sunrise</td>
+ 									     <td>{{getTime(current.sys.sunrise) | date:'HH:mm'}}</td>
+ 									</tr>
+ 									
+ 									<tr>
+ 									     <td>Sunset</td>
+ 									     <td>{{getTime(current.sys.sunset)| date:'HH:mm'}}</td>
+ 									</tr>
+ 									
+ 									<tr>
+ 									     <td>Geo coords</td>
+ 									     <td>{{current.coord.lon}},  {{current.coord.lat}}</td>
+ 									</tr>
+ 							</tbody>
+ 			
+ 					</table>
+ 			
+ 			</div>
+ 	
+ 	</div>
+
+</div>
+<div class="row  backNforecast">
+	<a href="#!/search" class="btn btn-info"> Back To Search</a>
+	<a href="#!/forecast/{{current.id}}" class="btn btn-info"> Forecast</a>
+</div>
+
+
+
+
+
+

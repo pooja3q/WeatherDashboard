@@ -1,0 +1,41 @@
+<div class="row forecast_view">
+
+	<h4>Weather Forecast For {{forecast.city.name}},  {{forecast.sys.country}}</h4>
+	<div class="col-sm-4  table-size">
+		<table class="table">
+			<tbody>
+				<tr ng-repeat="weather in forecast.list">
+							<td >
+							     {{getTime(weather.dt) | date:'yyyy/MMM/dd'}}  &nbsp;&nbsp;
+							     <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png">
+							</td>
+							
+							<td>
+							 	<span class="label label-warning">{{weather.main.temp_max - 273.15 | number}}&#8451;
+							 	</span>&nbsp;
+							 	
+							 	<span class="label label-warning black-warning">{{weather.main.temp_min - 273.15 | number}}&#8451;
+							 	</span>&nbsp;&nbsp;<BR>
+							 	 
+							 	 <i>{{weather.weather[0].description}}
+							 	 </i>
+							 	 <p>
+							 	    wind : {{weather.wind.speed}} m/s <br>
+							 	    Clouds: {{weather.clouds.all}}% , pressure: {{weather.main.pressure}} hpa
+							 	 </p>
+							</td>
+				</tr>
+			</tbody>
+		</table>
+	
+	</div>
+
+
+</div>
+<!-- <div poojaforecast  dp="forecast" class="high_chart_view">
+ -->
+ <edgzy-forecast dp="forecast" class="high_chart_view"></edgzy-forecast>
+
+</div>
+
+
