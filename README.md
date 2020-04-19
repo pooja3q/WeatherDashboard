@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"# WeatherDashboard"
-=======
 # Weather Dashboard
 *"Weather Dashboard by using AngularJs (Angular1.x) version "*
 
@@ -15,4 +12,23 @@ cd WeatherDashboard
 
 ## Overview
 View climate conditions, get current weather, daily forecast with weather dashboard.
->>>>>>> dd3b821768de584c5c21ce0f5a45a5effcb069f9
+
+## Usage
+Enter the city name for see the weather report.
+
+![](util/weather1.gif)
+
+
+### Weather report
+This page include all details.
+
+![](util/weather2.gif)
+
+### Forcast Report
+Click on the forecast button to see the report.
+
+![](util/weather3.gif)
+
+
+
+
